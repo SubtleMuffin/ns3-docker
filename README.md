@@ -20,7 +20,6 @@ But it has some downsides as well,
 This docker image is meant for developing ns3 on a docker image. A suggested workflow could be
 
 1. Pull this docker image via
-
 ```shell
 docker pull subtlemuffin/ns3:latest
 ```
@@ -31,7 +30,6 @@ docker run -td --name ns3 subtlemuffin/ns3:latest
 ```
 
 3. Test if everything is OK
-
 ```shell
 docker exec -it ns3 ./waf --run scratch/scratch-simulator
 ```
@@ -40,13 +38,11 @@ docker exec -it ns3 ./waf --run scratch/scratch-simulator
 Tips & Tricks
 
 * Start a container
-
 ```shell
 docker start ns3
 ```
 
 * Spin up a container and attach to it
-
 ```shell
 docker run -it --name ns3 subtlemuffin/ns3:latest
 ```
