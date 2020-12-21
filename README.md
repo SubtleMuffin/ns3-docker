@@ -64,13 +64,13 @@ a0a5efceab78   subtlemuffin/ns3:latest   "/bin/bash"   2 seconds ago   Up 1 seco
 
 Please also make sure that the following extensions are installed
 
-* [Docker by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+* [Remote-Contianers by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 * [C++ by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 
 
 These can be installed via `VS Code Quick Open` (<key>Ctrl</key>+<key>P</key>) and type in
 ```
-ext install ms-azuretools.vscode-docker
+ext install ms-vscode-remote.remote-containers
 ```
 and
 ```
