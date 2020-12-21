@@ -26,7 +26,7 @@ docker pull subtlemuffin/ns3:latest
 
 2. Spawn a container (and keep it running in the background)
 ```
-docker run -td --name ns3 subtlemuffin/ns3-docker:latest
+docker run -itd --name ns3 subtlemuffin/ns3-docker:latest
 ```
 
 3. Test if everything is OK
@@ -48,6 +48,12 @@ docker run -it --name ns3 subtlemuffin/ns3-docker:latest
 ```
 
 This example runs a container named `ns3` using the `subtlemuffin/ns3:latest` image. The `-it` instructs Docker to allocate a pseudo-TTY connected to the container’s stdin; creating an interactive bash shell in the container.
+
+* Attach to a running container to open a new terminal session
+```shell
+docker attach ns3
+```
+
 
 * VS Code and Docker Development
 
