@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:buster-slim
 
 # Install essential binaries
 RUN apt-get update && apt-get upgrade -y
