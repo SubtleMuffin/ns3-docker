@@ -17,7 +17,7 @@ But it has some downsides as well,
 
 
 `macOS` with `clang++ v12.0.0`
-```shell
+```
 paul@mbp ~/D/ns-3-dev (master)> time ./waf --run scratch/wifi-spatial-reuse
 Waf: Entering directory `/Users/paul/Desktop/ns-3-dev/build'
 Waf: Leaving directory `/Users/paul/Desktop/ns-3-dev/build'
@@ -33,7 +33,7 @@ Executed in   42.43 secs   fish           external
 ```
 
 `debian 10` with `g++ v8.3` [see log here](https://hub.docker.com/repository/docker/subtlemuffin/ns3-docker/builds/53cf4cf3-c6a6-4458-ba0a-b533ebfc26a0)
-```shell
+```
 root@ae3feed8062d:/ns-3-dev# time ./waf --run scratch/wifi-spatial-reuse
 Waf: Entering directory `/ns-3-dev/build'
 Waf: Leaving directory `/ns-3-dev/build'
