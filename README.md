@@ -13,7 +13,40 @@ The benefits of developing ns3 in Docker are,
 But it has some downsides as well,
 
 1. Users are required to have some basic knowledge of Docker.
-2. Performance maybe sacrificed -- but it is hard to tell Linux docker execution speed vs. macOS native binaries speed.
+2. ~~Performance maybe sacrificed -- but it is hard to tell Linux docker execution speed vs. macOS native binaries speed.~~
+
+
+`macOS` with `clang++ v12.0.0`
+```shell
+paul@mbp ~/D/ns-3-dev (master)> time ./waf --run scratch/wifi-spatial-reuse
+Waf: Entering directory `/Users/paul/Desktop/ns-3-dev/build'
+Waf: Leaving directory `/Users/paul/Desktop/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.427s)
+Throughput for BSS 1: 6.6732 Mbit/s
+Throughput for BSS 2: 6.6768 Mbit/s
+
+________________________________________________________
+Executed in   42.43 secs   fish           external
+   usr time   37.72 secs  118.00 micros   37.72 secs
+   sys time    1.94 secs  636.00 micros    1.94 secs
+```
+
+`debian 10` with `g++ v8.3` [see log here](https://hub.docker.com/repository/docker/subtlemuffin/ns3-docker/builds/53cf4cf3-c6a6-4458-ba0a-b533ebfc26a0)
+```shell
+root@ae3feed8062d:/ns-3-dev# time ./waf --run scratch/wifi-spatial-reuse
+Waf: Entering directory `/ns-3-dev/build'
+Waf: Leaving directory `/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (0.747s)
+Throughput for BSS 1: 6.6732 Mbit/s
+Throughput for BSS 2: 6.6768 Mbit/s
+
+real	0m29.323s
+user	0m29.236s
+sys	0m0.173s
+```
+
 
 ## How?
 
@@ -21,7 +54,7 @@ This docker image is meant for developing ns3 on a docker image. A suggested wor
 
 1. Pull this docker image via
 ```shell
-docker pull subtlemuffin/ns3:latest
+docker pull subtlemuffin/ns3-docker:latest
 ```
 
 2. Spawn a container (and keep it running in the background)
